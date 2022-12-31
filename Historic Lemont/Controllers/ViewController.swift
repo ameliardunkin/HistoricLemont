@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     var isFirstTime = true
@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.isZoomEnabled = true
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
+        mapView.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         addAnnotations()
@@ -55,6 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             mapView.addAnnotation(annotation)
         }
         mapView.showsUserLocation = true
+        
     }
     func render(_ location: CLLocation ){
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
@@ -63,6 +65,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(region, animated: true)
         isFirstTime = false
         
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        view.canShowCallout = false
+        view.tintColor = .gray
+        var siteVC = SiteDetailsVC()
+        siteVC.siteName = (view.annotation!.title ?? "Site")!
+        self.present(siteVC, animated: true)
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE24879F2960C6480054973F /* SiteDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24879E2960C6480054973F /* SiteDetailsVC.swift */; };
 		FEFC0531295A17A000021F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC0530295A17A000021F4B /* AppDelegate.swift */; };
 		FEFC0533295A17A000021F4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC0532295A17A000021F4B /* SceneDelegate.swift */; };
 		FEFC0535295A17A000021F4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC0534295A17A000021F4B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE24879E2960C6480054973F /* SiteDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetailsVC.swift; sourceTree = "<group>"; };
 		FEFC052D295A17A000021F4B /* Historic Lemont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Historic Lemont.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFC0530295A17A000021F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEFC0532295A17A000021F4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE2487A02960C66C0054973F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE24879E2960C6480054973F /* SiteDetailsVC.swift */,
+				FEFC0534295A17A000021F4B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FE2487A12960C6B90054973F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FEFC0536295A17A000021F4B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FEFC0524295A17A000021F4B = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +77,8 @@
 			children = (
 				FEFC0530295A17A000021F4B /* AppDelegate.swift */,
 				FEFC0532295A17A000021F4B /* SceneDelegate.swift */,
-				FEFC0534295A17A000021F4B /* ViewController.swift */,
-				FEFC0536295A17A000021F4B /* Main.storyboard */,
+				FE2487A02960C66C0054973F /* Controllers */,
+				FE2487A12960C6B90054973F /* Views */,
 				FEFC0539295A17A000021F4B /* Assets.xcassets */,
 				FEFC053B295A17A000021F4B /* LaunchScreen.storyboard */,
 				FEFC053E295A17A000021F4B /* Info.plist */,
@@ -140,6 +159,7 @@
 			files = (
 				FEFC0535295A17A000021F4B /* ViewController.swift in Sources */,
 				FEFC0531295A17A000021F4B /* AppDelegate.swift in Sources */,
+				FE24879F2960C6480054973F /* SiteDetailsVC.swift in Sources */,
 				FEFC0533295A17A000021F4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
