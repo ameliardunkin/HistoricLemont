@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Historic Lemont
 //
-//  Created by Ethan Dunkin on 12/26/22.
+//  Created by Amelia Dunkin on 12/26/22.
 //
 
 import UIKit
